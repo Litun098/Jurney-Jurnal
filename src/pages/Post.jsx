@@ -64,9 +64,9 @@ export default function Post() {
           )}
         </div>
         <div className="w-full mb-6">
-          <h1 className="text-2xl font-bold">{post.title}</h1>
+          <h1 className="text-2xl font-bold flex">{post.title}</h1>
         </div>
-        <div className="browser-css">{parse(post.content)}</div>
+        <div className="w-full flex flex-col justify-start">{parse(post.content)}</div>
       </Container>
     </div>
   ) : null;

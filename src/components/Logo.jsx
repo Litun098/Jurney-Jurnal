@@ -1,9 +1,11 @@
-import React from 'react'
-
-function Logo({width = '100px'}) {
+import logo from '../assets/jurney-jurnal.png'
+function Logo() {
   return (
-    <div>Logo</div>
-  )
+    <div>
+      <img src={logo} className="w-[70px]" alt="Logo" />
+    </div>
+  );
 }
+
 
 export default Logo

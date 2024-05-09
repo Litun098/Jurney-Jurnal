@@ -1,5 +1,6 @@
-import conf from '../conf/conf.js';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
+
+import conf from '../conf/conf.js';
 
 export class Service{
     client = new Client();
@@ -21,6 +22,7 @@ export class Service{
                 conf.appwriteCollectionId,
                 slug,
                 {
+                    slug,
                     title,
                     content,
                     featuredImage,
@@ -29,7 +31,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            console.log("Appwrite serive :: createPost :: error", error);
+            console.log("Appwrite serivice :: createPost :: error", error.message);
         }
     }
 

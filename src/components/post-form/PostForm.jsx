@@ -25,7 +25,6 @@ export default function PostForm({ post }) {
 
     const submit = async (data) => {
         if (post) {
-            console.log(post)
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
             if (file) {
@@ -119,7 +118,7 @@ export default function PostForm({ post }) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-400" : undefined} className="w-full">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>
